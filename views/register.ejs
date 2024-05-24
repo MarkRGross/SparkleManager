@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+<body>
+<%- include('partials/_header.ejs') %>
+<main role="main">
+    <div class="container mt-5">
+        <h2>Register</h2>
+        <form action="/auth/register" method="POST">
+            <div class="mb-3">
+                <input type="text" name="username" placeholder="Username" required class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="password" name="password" placeholder="Password" required class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="email" name="email" placeholder="Email" required class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="text" name="location" placeholder="Location (City, State, Zip Code)" required class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="text" name="businessName" placeholder="Business Name" required class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="number" name="numberOfEmployees" placeholder="Number of Employees" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="preferredTimezone">Preferred Timezone</label>
+                <select name="preferredTimezone" id="preferredTimezone" required class="form-control">
+                    <option value="">Select Timezone</option>
+                    <option value="UTC">UTC</option>
+                    <option value="America/New_York">America/New_York</option>
+                    <option value="Europe/London">Europe/London</option>
+                    <option value="Asia/Tokyo">Asia/Tokyo</option>
+                    <option value="America/Boise">America/Boise</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary mr-2">Register</button>
+                Already have an account? <a href="/auth/login">Login</a>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+<%- include('partials/_footer.ejs') %>
+</html>

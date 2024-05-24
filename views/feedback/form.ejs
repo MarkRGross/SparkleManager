@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/_head.ejs') %>
+<body>
+<%- include('../partials/_header.ejs') %>
+<main role="main" class="container mt-5">
+    <h2>Feedback Form</h2>
+    <form action="/feedback" method="POST">
+        <div class="mb-3">
+            <input type="text" name="name" placeholder="Your Name" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="email" name="email" placeholder="Your Email" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <textarea name="message" placeholder="Your Message" required class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </div>
+    </form>
+</main>
+<%- include('../partials/_footer.ejs') %>
+</body>
+</html>

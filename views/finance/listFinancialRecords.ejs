@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/_head.ejs') %>
+<body>
+<%- include('../partials/_header.ejs') %>
+<main role="main" class="container mt-5">
+    <h2>Financial Records</h2>
+    <% if(records.length > 0) { %>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% records.forEach(record => { %>
+                <tr>
+                    <td><%= record.type %></td>
+                    <td>$<%= record.amount.toFixed(2) %></td>
+                    <td><%= record.category %></td>
+                    <td><%= new Date(record.date).toLocaleDateString() %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No financial records found.</p>
+    <% } %>
+</main>
+<%- include('../partials/_footer.ejs') %>
+</body>
+</html>

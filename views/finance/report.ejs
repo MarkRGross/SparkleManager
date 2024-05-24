@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/_head.ejs') %>
+<body>
+<%- include('../partials/_header.ejs') %>
+<main role="main" class="container mt-5">
+    <h2>Year-End Tax Report</h2>
+    <div>
+        <h3>Profit and Loss Statement</h3>
+        <p><strong>Total Income:</strong> $<%= totalIncome.toFixed(2) %></p>
+        <p><strong>Total Expenses:</strong> $<%= totalExpenses.toFixed(2) %></p>
+        <p><strong>Net Profit:</strong> $<%= netProfit.toFixed(2) %></p>
+    </div>
+</main>
+<%- include('../partials/_footer.ejs') %>
+</body>
+</html>

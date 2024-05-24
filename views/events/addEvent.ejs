@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/_head.ejs') %>
+<body>
+<%- include('../partials/_header.ejs') %>
+<main role="main" class="container mt-5">
+    <h2>Add Event</h2>
+    <form action="/events/add" method="POST">
+        <div class="mb-3">
+            <input type="text" name="clientName" placeholder="Client's Name" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="address[city]" placeholder="City" required class="form-control">
+            <input type="text" name="address[state]" placeholder="State" required class="form-control mt-2">
+            <input type="text" name="address[zipCode]" placeholder="Zip Code" required class="form-control mt-2">
+        </div>
+        <div class="mb-3">
+            <input type="tel" name="phoneNumber" placeholder="Phone Number" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="date" name="eventDate" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="theme" placeholder="Theme" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <textarea name="specialInstructions" placeholder="Special Instructions" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <input type="text" name="partyBeneficiary" placeholder="Party Beneficiary" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="number" name="quoteGiven" placeholder="Quote Given" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="depositRequired" id="depositRequired">
+                <label class="form-check-label" for="depositRequired">
+                    Deposit Required?
+                </label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <input type="number" name="depositAmount" placeholder="Deposit Amount" class="form-control">
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="quotePaid" id="quotePaid">
+                <label class="form-check-label" for="quotePaid">
+                    Quote Paid?
+                </label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="timezone">Event Timezone</label>
+            <select name="timezone" id="timezone" required class="form-control">
+                <option value="">Select Timezone</option>
+                <option value="UTC">UTC</option>
+                <option value="America/New_York">America/New_York</option>
+                <option value="America/Chicago">America/Chicago</option>
+                <option value="America/Denver">America/Denver</option>
+                <option value="America/Los_Angeles">America/Los_Angeles</option>
+                <option value="America/Anchorage">America/Anchorage</option>
+                <option value="America/Honolulu">America/Honolulu</option>
+                <option value="America/Phoenix">America/Phoenix</option>
+                <option value="America/Detroit">America/Detroit</option>
+                <option value="America/Indiana/Indianapolis">America/Indiana/Indianapolis</option>
+                <option value="America/Kentucky/Louisville">America/Kentucky/Louisville</option>
+                <option value="America/Kentucky/Lexington">America/Kentucky/Lexington</option>
+                <option value="America/North_Dakota/Center">America/North_Dakota/Center</option>
+                <option value="America/North_Dakota/New_Salem">America/North_Dakota/New_Salem</option>
+                <option value="America/North_Dakota/Beulah">America/North_Dakota/Beulah</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Add Event</button>
+        </div>
+    </form>
+</main>
+<%- include('../partials/_footer.ejs') %>
+</body>
+</html>

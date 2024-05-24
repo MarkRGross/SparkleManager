@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/_head.ejs') %>
+<body>
+<%- include('../partials/_header.ejs') %>
+<main role="main" class="container mt-5">
+    <h2>Add Financial Record</h2>
+    <form action="/finance/add" method="POST">
+        <div class="mb-3">
+            <select name="type" required class="form-control">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input type="number" name="amount" placeholder="Amount" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="category" placeholder="Category" required class="form-control">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Add Record</button>
+        </div>
+    </form>
+</main>
+<%- include('../partials/_footer.ejs') %>
+</body>
+</html>

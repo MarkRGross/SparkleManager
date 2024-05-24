@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('./partials/_header.ejs') %>
+  <main role="main" class="container mt-5">
+    <h2>Profile</h2>
+    <p>Welcome to your profile! Here you can manage your settings.</p>
+    <% if (!isConnectedToGoogle) { %>
+      <a href="/auth/google" class="btn btn-primary">Connect to Google Calendar</a>
+    <% } else { %>
+      <p>Your Google Calendar is connected.</p>
+    <% } %>
+    <p>If you're seeing an error or need help, please check our <a href="/help">help section</a>.</p>
+  </main>
+  <%- include('./partials/_footer.ejs') %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjU3a+HC1emE3KuyzkP2Fwmq6qio1Fp9l6FqzFHEtG6PToR8OX1Y4a" crossorigin="anonymous"></script>
+</body>
+</html>

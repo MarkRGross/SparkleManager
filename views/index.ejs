@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+  <body>
+<%- include('partials/_header.ejs') %>
+    <main role="main" class="container mt-4">
+      <div class="text-center">
+        <h1>Sparkle_Manager_</h1>
+        <% if (logged_in) { %>
+          <div id="dashboard-summary">
+            <h2>Dashboard</h2>
+            <p>Upcoming Events in the Next 7 Days: <span id="upcomingEventsCount">Loading...</span></p>
+            <!-- Updated formatting for Total Income and Total Expenses -->
+            <p>Total Income This Month: $<span id="totalIncome"><%= totalIncome.toFixed(2) %></span></p>
+            <p>Total Expenses This Month: $<span id="totalExpenses"><%= totalExpenses.toFixed(2) %></span></p>
+            <div class="dashboard-actions mt-4">
+              <a href="/events/add" class="btn btn-primary">Add Event</a>
+              <a href="/finance/add" class="btn btn-success">Add Financial Record</a>
+              <a href="/feedback" class="btn btn-info">Submit Feedback</a>
+              <a href="/profile/settings" class="btn btn-secondary">Profile Settings</a>
+            </div>
+          </div>
+        <% } else { %>
+          <p>Please login to view your dashboard.</p>
+        <% } %>
+      </div>
+    </main>
+  </body>
+<%- include('partials/_footer.ejs') %>
+  <script src="/js/main.js"></script>
+  <script src="/js/dashboard.js"></script>
+</html>
