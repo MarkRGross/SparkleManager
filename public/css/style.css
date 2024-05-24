@@ -1,0 +1,27 @@
+/* Custom styles for Sparkle_Manager_ navigation */
+
+/* Style for secondary navbar that appears beneath the primary navigation bar */
+.secondary-nav-bar {
+    display: none; /* Hidden by default */
+    background-color: #f8f9fa; /* Light grey background */
+    border-top: 1px solid #dee2e6; /* Light grey border for distinction */
+    padding: 0.5rem 1rem; /* Padding for inner spacing */
+}
+
+/* Styling for links within the secondary nav bar */
+.secondary-nav-bar a {
+    color: #007bff; /* Bootstrap primary link color */
+    text-decoration: none; /* No underline */
+    margin-right: 1rem; /* Spacing between links */
+}
+
+/* Show the secondary nav bar when it's active */
+.secondary-nav-bar.show {
+    display: flex; /* Change display to flex when it should be shown */
+}
+
+/* Adjustments for main navigation links to indicate active state */
+.navbar-nav .nav-link.active {
+    background-color: #e9ecef; /* Light background to indicate active state */
+    border-radius: 0.25rem; /* Slightly rounded corners for aesthetics */
+}
