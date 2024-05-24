@@ -1,0 +1,36 @@
+{
+  "name": "Sparkle_Manager_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "chart.js": "^4.4.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "csv-writer": "^1.6.0",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "googleapis": "^134.0.0",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.45",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.1.1",
+    "morgan": "^1.10.0",
+    "node-cron": "^3.0.3",
+    "validator": "^13.11.0",
+    "winston": "^3.12.0"
+  }
+}
