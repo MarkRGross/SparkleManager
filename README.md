@@ -12,7 +12,7 @@ The application is built on a Node.js backend with Express, utilizing MongoDB fo
 - **Tracking Leads and Booked Gigs:** Users can input and track event details and client information.
 - **Financial Tracking:** Facilitates income and expense logging.
 - **Feature Request and Feedback:** A mechanism for users to provide feedback or request new functionalities.
-- **Google Calendar Integration:** Now supports two-way synchronization. Events created or updated in the Sparkle_Manager_ application are automatically synced to the user's connected Google Calendar, and vice versa.
+- **Google Calendar Integration:** Now supports two-way synchronization. Events created or updated in the Sparkle Manager application are automatically synced to the user's connected Google Calendar, and vice versa.
 
 ## Getting started
 
